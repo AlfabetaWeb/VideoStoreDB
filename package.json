@@ -1,7 +1,7 @@
 {
   "name": "videostoredb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Video Store Database",
   "main": "index.js",
   "scripts": {
     "start": "node index.js", 
