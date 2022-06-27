@@ -7,6 +7,8 @@ const port = 3000;  // puerto local
 
 const db = require('./db/db');  //me traigo la base de datos
 
+const router = require('./router.js');
+
 
 //Middlewares
 

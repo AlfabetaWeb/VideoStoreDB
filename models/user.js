@@ -1,3 +1,4 @@
+
 'use strict';
 const {
   Model
@@ -11,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      User.hasMany(models.video, {
+        //En este caso, foreignKey hace referencia a como se llama la clave de user en la tabla rental
+        foreignKey: 'customerID'
+      });
+
     }
   }
   User.init({
@@ -19,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     phone: DataTypes.STRING,
-    customer_number: DataTypes.INTEGER
+    customer_type: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

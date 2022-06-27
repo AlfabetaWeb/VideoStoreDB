@@ -11,6 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      Video.hasMany(models.rental, {
+        //En este caso, foreignKey hace referencia a como se llama la clave de user en la tabla rental
+        foreignKey: 'videoID'
+      });
+
     }
   }
   Video.init({
@@ -18,8 +24,10 @@ module.exports = (sequelize, DataTypes) => {
     year: DataTypes.INTEGER,
     genre: DataTypes.STRING,
     director: DataTypes.STRING,
+    synopsis: DataTypes.STRING,
     duration: DataTypes.STRING,
-    age_rate: DataTypes.STRING
+    age_rate: DataTypes.STRING,
+    movie_type: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Video',
