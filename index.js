@@ -12,9 +12,6 @@ const db = require('./db/db');  //me traigo la base de datos
 
 app.use(express.json());   //te permite trabajar con json en este backend
 
-
-
-
 //Conexión a base de datos y levantar servidor
 // este callback llama al puerto para levantar el servidor y si falla envía un aviso
 db.then(()=>{
