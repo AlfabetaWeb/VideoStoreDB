@@ -13,6 +13,7 @@ const router = require('./router.js');
 //Middlewares
 
 app.use(express.json());   //te permite trabajar con json en este backend
+app.use(router);
 
 //Conexión a base de datos y levantar servidor
 // este callback llama al puerto para levantar el servidor y si falla envía un aviso
