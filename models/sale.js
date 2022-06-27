@@ -11,6 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+         //La parte belongsTo (pertenece a) S I E M P R E se anota en la tabla intermedia, que en este caso es esta misma, Rental.
+            Sale.belongsTo(models.User, {
+         //userId es la clave importada en este caso
+            foreignKey: 'customerId'
+          });
+            
+            Rental.belongsTo(models.Video, {
+          //userId es la clave importada en este caso
+            foreignKey: 'videoId'
+          });
     }
   }
   Sale.init({
