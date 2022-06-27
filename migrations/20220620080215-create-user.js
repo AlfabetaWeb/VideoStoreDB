@@ -23,8 +23,8 @@ module.exports = {
       phone: {
         type: Sequelize.STRING
       },
-      customer_number: {
-        type: Sequelize.INTEGER
+      customer_type: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

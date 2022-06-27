@@ -20,10 +20,16 @@ module.exports = {
       director: {
         type: Sequelize.STRING
       },
+      synopsis: {
+        type: Sequelize.STRING
+      },
       duration: {
         type: Sequelize.STRING
       },
       age_rate: {
+        type: Sequelize.STRING
+      },
+      movie_type: {
         type: Sequelize.STRING
       },
       createdAt: {
